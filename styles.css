@@ -1,5 +1,5 @@
 body {
-  background-color: #d79e47;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -38,34 +38,40 @@ td {
   text-align: left;
   margin-left: 300px;
   font-size: 20px;
+  font-family: georgia;
 }
 
 .lastName {
   text-align: right;
   margin-right: 300px;
   font-size: 20px;
+  font-family: georgia;
 }
 
 .idNumber {
   text-align: left;
   margin-left: 300px;
   font-size: 20px;
+  font-family: georgia;
 }
 
 .jobTitle {
   text-align: right;
   margin-right: 300px;
   font-size: 20px;
+  font-family: georgia;
 }
 
 .annualSalary {
   text-align: left;
   margin-left: 300px;
   font-size: 20px;
+  font-family: georgia;
 }
 
 .submitButton {
   text-align: right;
   margin-right: 300px;
   font-size: 20px;
+  font-family: georgia;
 }
