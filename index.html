@@ -12,21 +12,26 @@
 <body>
 
   <h1>Weekend Challenge 1</h1>
-    <!-- New Employee Form -->
+  <p class='firstName'>  <!-- New Employee Form -->
     <label for="firstName">First Name</label>
     <input type="text" name="firstName" placeholder="firstName" id="firstName" class="employeeFormInput">
-
+  </p>
+  <p class='lastName'>
     <label for="lastName">Last Name</label>
     <input type="text" name="lastName" placeholder="lastName" id="lastName" class="employeeFormInput">
-
+  </p>
+  <p class='idNumber'>
     <label for="idNumber">ID Number</label>
     <input type="text" name="idNumber" placeholder="idNumber" id="idNumber" class="employeeFormInput">
-
+  </p>
+  <p class="jobTitle">
     <label for="jobTitle">Job Title</label>
     <input type="text" name="jobTitle" placeholder="jobTitle" id="jobTitle" class="employeeFormInput">
-
+  </p>
+  <p class="annualSalary">
     <label for="annualSalary">Annual Salary</label>
     <input type="text" name="annualSalary" placeholder="annualSalary" id="annualSalary" class="employeeFormInput">
+  </p>
 
     <button type="button" id="submitNewEmployee">Submit</button>
 
@@ -35,18 +40,18 @@
     <table>
       <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Annual Salary</th>
-          <th>Delete</th>
+          <th class="topTable">First Name</th>
+          <th class="topTable">Last Name</th>
+          <th class="topTable">ID</th>
+          <th class="topTable">Title</th>
+          <th class="topTable">Annual Salary</th>
+          <th class="topTable">Delete</th>
         </tr>
       </thead>
       <tbody id='employeeTableBody'>
       </tbody>
     </table>
   <!-- monthly expenditure -->
-    <h3>Monthly Salary Expenditures: <span id='monthlyExspenses'>0</span></h3>
+    <h3>Monthly Salary Expenditures: <span id='monthlyExpenses'>0</span></h3>
   </body>
 </html>

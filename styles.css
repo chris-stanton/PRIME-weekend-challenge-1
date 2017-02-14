@@ -7,31 +7,16 @@ h1 {
 }
 
 h3 {
-  text-align: left;
+  font-size: 20px;
 }
 
-div {
-  margin-top: 50px;
-}
-
-button {
-  margin-right: auto;
-}
-
-#topTable {
-  border:;
-  width: auto;
-  height: 10px;
-  text-align: left;
-  margin: 0px, 20px, -30px, 20px;
+.topTable {
   text-decoration: underline;
+  font-size: 17px;
 }
 
-td {
-  border:;
-  width: 700px;
-  height: 10px;
-  text-align: left;
+th {
+  width: 125px;
 }
 
 .firstName {
@@ -57,21 +42,21 @@ td {
 
 .jobTitle {
   text-align: right;
-  margin-right: 300px;
+  margin-right: 310px;
   font-size: 20px;
   font-family: georgia;
 }
 
 .annualSalary {
   text-align: left;
-  margin-left: 300px;
+  margin-left: 280px;
   font-size: 20px;
   font-family: georgia;
 }
 
-.submitButton {
+#submitNewEmployee {
   text-align: right;
-  margin-right: 300px;
+  margin-left: 800px;
   font-size: 20px;
   font-family: georgia;
 }
