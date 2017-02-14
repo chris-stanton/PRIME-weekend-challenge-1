@@ -1,70 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script src="jquery.js"></script>
-    <script type="text/javascript" src="client.js"></script>  <!-- Verify Link -->
-    <link type="text/css" rel="stylesheet" href="styles.css">
-      <title>Week 1 Weekend Assignment</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery.js"></script>
+  <script type="text/javascript" src="client.js"></script>
+  <link type="text/css" rel="stylesheet" href="styles.css">
+  <title>Weekend Challenge 1</title>
+</head>
 
-  <body>
-    <h1>Week 1 Weekend Assignment</h1>
+<body>
 
-  <p class="firstName">
+  <h1>Weekend Challenge 1</h1>
+    <!-- New Employee Form -->
     <label for="firstName">First Name</label>
-    <input id="firstName" type="text">
-  </p>
+    <input type="text" name="firstName" placeholder="firstName" id="firstName" class="employeeFormInput">
 
-  <p class="lastName">
     <label for="lastName">Last Name</label>
-    <input id="lastName" type="text">
-  </p>
+    <input type="text" name="lastName" placeholder="lastName" id="lastName" class="employeeFormInput">
 
-  <p class="idNumber">
     <label for="idNumber">ID Number</label>
-    <input id="idNumber" type="text">
-  </p>
+    <input type="text" name="idNumber" placeholder="idNumber" id="idNumber" class="employeeFormInput">
 
-  <p class="jobTitle">
     <label for="jobTitle">Job Title</label>
-    <input id="jobTitle" type="text">
-  </p>
+    <input type="text" name="jobTitle" placeholder="jobTitle" id="jobTitle" class="employeeFormInput">
 
-  <p class="annualSalary">
     <label for="annualSalary">Annual Salary</label>
-    <input id="annualSalary" type="text">
-  </p>
+    <input type="text" name="annualSalary" placeholder="annualSalary" id="annualSalary" class="employeeFormInput">
 
-  <p class="submitButton">
-    <button id="submitButton" name="submit" type="button">Submit</button>
-  </p>
+    <button type="button" id="submitNewEmployee">Submit</button>
 
-    <h3>Employee List</h3>
-
-      <table id='topTable'>
-        <td>First Name</td>
-        <td>Last Name</td>
-        <td>ID Number</td>
-        <td>Job Title</td>
-        <td>Anual Salary</td>
-      </table>
-
-      <table id='resultTable'>
-        <td id='firstNameContainer'> </td>
-        <td id='lastNameContainer'> </td>
-        <td id='idNumberContainer'> </td>
-        <td id='jobTitleContainer'> </td>
-        <td id='annualSalaryContainer'> </td>
-      </table>
-
-<!-- this is the empty container where the monthly salary will calculate to -->
-    <div id='container'> Monthly Salary Expenditures:</div>
-
-   </body>
+    <!-- Table of Employee -->
+    <h3>Emplyee List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id='employeeTableBody'>
+      </tbody>
+    </table>
+  <!-- monthly expenditure -->
+    <h3>Monthly Salary Expenditures: <span id='monthlyExspenses'>0</span></h3>
+  </body>
 </html>
-
-
-
-<!-- GitHub url: https://github.com/chris-stanton/Weekend-Challenge--1/blob/master/index.html -->

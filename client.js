@@ -1,28 +1,51 @@
 
-$(document).ready(function(){
+$(document).ready(function() {
+  $('#submitNewEmployee').on('click', function(){
 
-  $('#submitButton').on('click', function(){
-//Stores input field to variable
     var firstName = $('#firstName').val();
     var lastName = $('#lastName').val();
     var idNumber = $('#idNumber').val();
     var jobTitle = $('#jobTitle').val();
     var annualSalary = $('#annualSalary').val();
 
-//Total monthly average salary calculation
-    var singleMonthlySalary = annualSalary / 12;
-    $('#container').text('Monthly Salary Expenditures: ' + singleMonthlySalary);
+// .append() needs a string value
+// + joins merges content to a string
+    $('#employeeTableBody').append(
 
-//Ties input values to specific table cell
-    $('#firstNameContainer').append('<p> </p>' + '<button id="deleteButton">Delete</button>' + firstName);
-    $('#lastNameContainer').append('<p> </p>' + lastName);
-    $('#idNumberContainer').append('<p> </p>' + idNumber);
-    $('#jobTitleContainer').append('<p> </p>' + jobTitle);
-    $('#annualSalaryContainer').append('<p> </p>' + annualSalary);
+// <tr> is now in a string form that includes all <td>
+// Adds new employee to the DOM
+    '<tr>' +
+      '<td>' + firstName + '</td>' +
+      '<td>' + lastName + '</td>' +
+      '<td>' + idNumber + '</td>' +
+      '<td>' + jobTitle + '</td>' +
+      '<td>' + annualSalary + '</td>' +
+      '<td><button class="deleteEmployeeButton" data-salary="' + annualSalary + '">Delete ' + firstName + '</button></td>' +
+    '</tr>'
+    );
 
-//Deletes input value as a line - *broken fuction needs to be fixed*
-    $('#resultTable').on('click', '#deleteButton', function(){
-      $(this).closest('tr').remove().val();
-    });
+// Add monthly salary to the DOM
+  var newEmployeeMonthlyExpenses = annualSalary / 12;
+
+//$('#monthlyExpenses').text(); pulls value from line and converts it to a string
+  var perviousSalaryTotal = $('#monthlyExpenses').text();
+  var totalMonthlyExpenses = parseFloat(perviousSalaryTotal) + newEmployeeMonthlyExpenses;
+  $('#monthlyExpenses').text(totalMonthlyExpenses);
+
+//Clear out input boxes
+$('.employeeFormInput').val('');
+});
+
+//Adds delete button function to each entry into list
+  $('#employeeTableBody').on('click', '.deleteEmployeeButton', function(){
+//removing employee salary from total
+    var deletedEmployeeSalary = $(this).data('salary');
+    var deletedEmployeeMonthlyExpenses = deletedEmployeeSalary / 12;
+    var perviousMonthlyExpenses = $('#monthlyExpenses').text();
+    var newTotalMonthlyExpenses = perviousMonthlyExpenses - deletedEmployeeMonthlyExpenses;
+    $('#monthlyExpenses').text(newTotalMonthlyExpenses);
+//Deletes an entire row
+    $(this).parent().parent().remove();
   });
+
 });
